@@ -176,41 +176,45 @@ function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
-
+  return (str + '!');
 }
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  
+  const combinar = `${nombre} ${apellido}`;
+  return combinar;
 }
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  
+  const saludo = `Hola ${nombre}!`;
+  return saludo;
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
-  
+  const areaRec = ( alto * ancho )
+  return areaRec;
 }
 
 
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  
+  return lado * 4;
 }
 
 
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-
+ const areaT = (base * altura)/2
+ return areaT;
 }
 
 
@@ -218,7 +222,9 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  
+  const equivalencia = 1.20;
+  const convertir = euro * equivalencia;
+  return convertir;
 }
 
 
@@ -229,8 +235,44 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
   
-}
+  // return (letra.length > 1 || !/[aeiou]/.test(letra)) ? 'Dato incorrecto' : 'Es vocal';
 
+  if (letra.length == 1 ) {
+
+      if ( letra === 'a' || letra ==='e' || letra ==='i' || letra ==='o' || letra ==='u') {
+        return 'Es vocal';
+      } else {
+        return 'Dato incorrecto'
+      }
+
+  } else {
+    return 'Dato incorrecto';
+  }
+
+
+  // if (letra == 'a') {
+  //  return 'Es vocal'}
+  // else if (letra == 'e') {
+  //  return 'Es vocal'}
+  // else if (letra == 'i') {
+  //  return 'Es vocal'}
+  // else if (letra == 'o') {
+  //  return 'Es vocal'}
+  // else if (letra == 'u') {
+  //  return 'Es vocal'}
+  //  else {
+  //    return 'Dato incorrecto';
+  //  }
+
+
+  // No anda de esta forma
+  // (letra == 'a')? 'Es vocal' : 'Dato incorrecto';
+  // (letra == 'e')? 'Es vocal' : 'Dato incorrecto';
+  // (letra == 'i')? 'Es vocal' : 'Dato incorrecto';
+  // (letra == 'o')? 'Es vocal' : 'Dato incorrecto';
+  // (letra == 'u')? 'Es vocal' : 'Dato incorrecto';
+
+}
 
 
 // No modificar nada debajo de esta línea
